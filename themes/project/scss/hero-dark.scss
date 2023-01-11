@@ -1,0 +1,81 @@
+
+.bighead {
+    // background-image: url('../../../image/trumpet2.jpg'); // BRIGHT
+    background-image: url('../../../image/instruments2.jpg?q=50'); // DARK
+    // backdrop-filter: grayscale(75%);
+}
+
+@media (max-width: 767px) {
+    .bighead {
+        background-image: url('../../../image/instruments2.jpg?q=50&area=20,0,0,40&w=1600');
+    }
+}
+
+.space-head {
+    grid-template-rows: 70px auto; // DARK
+    // grid-template-rows: 70px 3fr 1fr; // BRIGHT
+    backdrop-filter: grayscale(75%);
+}
+
+
+.space-site-header {
+    background-color: $nav-back-transparent;
+    backdrop-filter: blur(0.2em);
+}
+
+.space-grid {
+    // grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 1fr 4fr 7fr;
+}
+
+.space-float {
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
+}
+
+.book {
+    background-color: $book-box-transparent;
+    padding: 0 1rem;
+    backdrop-filter: blur(0.5em);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    // padding: 3em;
+    text-align: center;
+    // test
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Small head section for book page */
+.smallhead {
+    background-image: url('../../../image/instruments2.jpg?q=50'); // Dark
+    background-position: 50% 60%;
+}
+
+@media (max-width: 767px) {
+    .smallhead {
+        background-image: url('../../../image/instruments2.jpg?q=50&area=10,0,0,40&w=1600');
+    }
+}
+
+@media (max-width: 1050px) {
+    .space-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .space-float {
+        grid-column: 1/2;
+    }
+}
+
+@media (max-width: 767px) {
+    .space-grid {
+        grid-template-columns: auto;
+        align-self: flex-end;
+    }
+}

@@ -1,0 +1,64 @@
+.bighead {
+    background-image: url('../../../image/trumpet2.jpg?q=50'); // BRIGHT
+    // background-image: url('../../../image/guitar.jpg'); // DARK
+}
+
+@media (max-width: 767px) {
+    .bighead {
+        background-image: url('../../../image/trumpet2.jpg?q=50&area=20,10,0,0&w=1600');
+    }
+}
+
+.space-head {
+    // grid-template-rows: 70px auto; // DARK
+    grid-template-rows: 70px 5fr 2fr; // BRIGHT
+}
+
+.space-grid {
+    grid-row: 3/4;
+}
+
+.space-float {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.book {
+    grid-column: 2/3;
+    padding: 0.5em 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $book-box-transparent;
+    backdrop-filter: blur(0.5em);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1em;
+
+    h1 {
+        margin-top: 0;
+    }
+}
+
+/* Small head section for book page */
+.smallhead {
+    background-image: url('../../../image/trumpet2.jpg?q=50'); // BRIGHT
+}
+
+@media (max-width: 767px) {
+    .smallhead {
+        background-image: url('../../../image/trumpet2.jpg?q=50&area=0,10,20,0&w=1600');
+    }
+}
+
+@media (max-width: 767px) {
+    .space-float {
+        grid-template-columns: auto;
+    }
+
+    .book {
+        margin: 1em;
+    }
+}

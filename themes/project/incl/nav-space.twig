@@ -1,0 +1,73 @@
+<div class="bighead">
+    {# <img src="{{ base_url }}/image/trumpet2.jpg"> #}
+    {# <img src="{{ base_url }}/image/trumpet2.jpg?w=1700" srcset="{{ base_url }}/image/trumpet2.jpg?w=1700, {{ base_url }}/image/trumpet2.jpg?w=3400 2x" alt="Trumpet"> #}
+    <div class="space-head" role="banner">
+        <div class="space-site-header">
+            <div class="logo-title">
+                {# LOGO #}
+                {% if pages["_meta"].meta.logo %}
+                <div class="space-logo">
+                    
+                        <img src="{{ base_url }}/{{ pages["_meta"].meta.logo|url }}" alt="" class="logoimage" />
+                    
+                </div>
+                {% endif %}
+
+                {# TITLE #}
+                <div class="space-title" {{ pages["_meta"].meta.tagline ? ' class="tagline"' }}>
+                    <a href="{{ base_url }}">
+                        <h1>
+                            <span class="space">{{ site_title }} </span>
+                        {{ pages["_meta"].meta.tagline|markdown }}
+                        </h1>
+                    </a>
+                </div>
+            </div>
+
+            {# NAVBAR #}
+            <div class="nav">
+                <div id="nav" role="navigation" tabindex="-1">
+                    <ul>
+                        {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
+                            <li{% if page.id==current_page.id %} class="active" {% endif %}>
+                                <a href="{{ page.url }}">{{ page.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+
+            {# NAVMOB #}
+            <a class="nav-toggle" id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false">
+                <i class="fa fa-bars" aria-hidden="true" id="toggler"></i>
+                <span class="sr-only">Menu</span>
+            </a>
+    
+            
+            
+            
+        </div>
+        <div class="space-grid">
+            <div class="space-float">
+                <div class="book">
+                    <div class="book-text">
+                        <h1>We love jazz!</h1>
+                        <p>Vi är det lilla jazz-kollektivet från Partille som spelar allt från storbands-jazz
+                            och swing till afro-beat och bossa nova.
+                        
+                        </p>
+                    </div>
+                    <a href="{{ base_url }}/book">
+                        <div class="book-box">
+                            <span class="booklink">Boka oss!</span>
+                        </div>
+                    </a>
+    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

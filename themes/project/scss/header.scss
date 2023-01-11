@@ -1,0 +1,128 @@
+/**
+* HEADER
+*/
+
+/* Header */
+
+/* Big hero image, different image dark vs bright */
+
+.bighead {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    color: $head-font-color;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: $head-font;
+    }
+
+    a {
+        color: $head-font-color;
+        font-family: $head-font;
+    }
+}
+
+/* Small head section for book page */
+.smallhead {
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    color: $head-font-color;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: $head-font;
+    }
+
+    a {
+        color: $head-font-color;
+        font-family: $head-font;
+    }
+}
+
+
+
+/* Grid over the whole image - SEE HERO-BRIGHT AND HERO-DARK */
+
+.space-head {
+    height: 100%;
+    display: grid;
+    // grid-template-rows: 70px auto; // DARK
+    // grid-template-rows: 70px 3fr 1fr; // BRIGHT
+}
+
+/* Bar on top with logo, title and navbar */
+
+.space-site-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.space-logo {
+    padding: 1em 2em;
+}
+
+.logoimage {
+    width: 130px;
+}
+
+.space-title {
+    text-decoration: none;
+}
+
+/* Area over image */
+
+.book-box {
+    background-color: $accent-transparent;
+    font-size: 2em;
+    border: $box-border;
+    padding: 0.5em 1.5em;
+    font-family: $head-font;
+    letter-spacing: 5px;
+    margin: 0.5rem 0;
+}
+
+.book a {
+    color: $box-font-color;
+}
+
+.book-text {
+    text-align: center;
+    line-height: normal;
+
+    h1 {
+        font-size: 3em;
+        text-shadow: $hero-text-shadow;
+    }
+
+    p {
+        color: $header-small-color;
+        font-family: $small-head-font;
+        letter-spacing: $book-text-space;
+    }
+}
+
+.book-box:hover {
+    background-color: $accent;
+    padding: 0.6em 1.7em;
+    margin: 0.3rem 0;
+}
